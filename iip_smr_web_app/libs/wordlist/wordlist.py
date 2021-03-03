@@ -46,8 +46,8 @@ def get_latin_words_pos_new():
     log.debug( 'start' )
 
     with requests.Session() as s:
-        log.debug( f'LATIN_CSV_NEW_URL, ``{settings_app.LATIN_CSV_NEW_URL}``' )
-        download = s.get(settings_app.LATIN_CSV_NEW_URL)
+        log.debug( f'LATIN_CSV_URL, ``{settings_app.LATIN_CSV_URL}``' )
+        download = s.get(settings_app.LATIN_CSV_URL)
         log.debug( f'download, ``{download}``' )
         decoded = download.content.decode('utf-8')
         words = {}
